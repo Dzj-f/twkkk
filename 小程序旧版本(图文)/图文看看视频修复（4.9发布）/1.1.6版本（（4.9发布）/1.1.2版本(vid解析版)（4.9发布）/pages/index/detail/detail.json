@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+      "txv-video": "plugin://tencentvideo/video",
+      "mp-video-swiper": "../../components/myvideo-swiper/index"
+  }
+}

@@ -1,0 +1,345 @@
+<!-- 头部导航栏 -->
+  <view class='moreBoxs'catchtap="duihua">
+  <view class="tixing" wx:if="{{tixing}}">
+      <image src="/image/tixingclose.png" style="width:40rpx;height:40rpx;" class="tixingimg" catchtap="tixingclose"></image>
+      <view class="tixingtext" >有好看的视频提醒我</view>
+      <view class="tixingbtn">提醒</view>
+  </view>
+      <scroll-view class="navContent" scroll-x>
+        <view class="classify {{first_id==index?'addStyleMi':''}}" bindtap="navClick" 
+                      wx:for='{{first_names}}' wx:key='index'  wx:for-item="first_names" wx:for-index="index" 
+                      data-postid='{{first_names.id}}' data-index='{{index}}' data-postname='{{first_names.goods_name}}'>
+            <text>{{first_names.goods_name}}</text>
+          </view>
+      </scroll-view>
+</view>  
+    <!-- <scroll-view class="scroll-view_H" scroll-x="true" bindscroll="scroll" style="width: 100%">
+          <view catchtap="gotuijian" class="scroll-view-item_H demo-text-1"   data-page="1"  >推荐</view>
+          <view catchtap="gogaoxiao"   data-page="2" 
+          class="active {{first_id==index?'scroll-view-item_H demo-text-2':''}}">搞笑</view>
+          <view catchtap="gozhufu" class="scroll-view-item_H demo-text-3" v-bind:class="{ active: isActive3 }">祝福</view>
+          <view  catchtap="gojiankang"  class="scroll-view-item_H demo-text-2" v-bind:class="{ active: isActive4 }">健康</view>
+          <view catchtap="gomiaozhao" class="scroll-view-item_H demo-text-3" v-bind:class="{ active: isActive5 }">妙招</view>
+          <view catchtap="gojingcai" class="scroll-view-item_H demo-text-3" v-bind:class="{ active: isActive6 }">精彩</view>
+          <view catchtap="gogewu"  class="scroll-view-item_H demo-text-2" v-bind:class="{ active: isActive7 }">歌舞</view>
+          <view catchtap="gorensheng" class="scroll-view-item_H demo-text-3" v-bind:class="{ active: isActive8 }">人生</view>
+    </scroll-view> -->
+
+<view class="container" style="margin-top:{{containermarginTop}}">
+
+  
+<!------------------------------ 推荐 ------------------------------------->
+<view class="video-list"  wx:if="{{page==0}}">
+      <!-- <view>推荐</view> -->
+        <block wx:for="{{myVideoList}}"  data-index='{{index}}' bindtap="goDetail" wx:key='index'>
+            <view class="video-item">  
+                    <!-- banner图广告组件 -->
+
+                    <ad wx:if="{{index%4===1}}" unit-id="adunit-6c58a4c9758710e8"></ad>
+            
+                    
+                     <!-- 视频列表主题 -->
+                     <view class="video-wraps"  data-index='{{index}}' data-videourl='{{item.videourl}}' bindtap="goDetail"  url="" data-videotitle='{{item.title}}'>
+                        <view class="video-wrap" wx:if="{{myVideoList}}" >
+
+                              <!-- 封面可以从视频和视频截图中选其一，选图片如果放在本地，要压缩，会变模糊，使用视频，视频源是横屏就是横屏，竖屏就是两边黑底 -->
+                              <image  class="video-fmimage" lazyLoad="{{true}}" style="width:700rpx;" 
+                                  src="{{item.fmimage}}">
+                              </image>
+
+                              <!-- <video  class="video-fmimage" 
+                              src="{{item.videourl}}" 
+                              show-center-play-btn="{{false}}"
+                              controls="{{false}}"
+                              ></video>                                                              -->
+
+
+                          <!-- 播放按钮相对于推荐最外层view绝对定位                           -->
+                      </view>
+                         <image src="/image/tjfm/btnplay.png" class="btnplay"></image>
+                         <view class="title"><text class="title_text" >{{item.title}}</text></view> 
+                      </view>
+    
+            </view>
+        </block>
+</view>
+
+<!------------------------------ 搞笑 ------------------------------------->
+<view class="video-list"  wx:if="{{page==1}}">
+      <!-- <view>搞笑</view> -->
+        <block wx:for="{{myVideoListGaoxiao}}"  data-index='{{index}}' bindtap="goDetail" wx:key='{{index}}'>
+            <view class="video-item">  
+                    <!-- banner图广告组件 -->
+
+                     <ad wx:if="{{index%4===1}}" unit-id="adunit-6c58a4c9758710e8"></ad>
+
+                     <!-- 视频列表主题 -->
+                     <view class="video-wraps"  data-index='{{index}}' data-videourl='{{item.videourl}}' bindtap="goDetail"  url="/example/video-swiper/video-swiper?index={{index}}&videourl={{item.videourl}}">
+                        <view class="video-wrap" wx:if="{{myVideoList}}" >
+
+                               <!-- 封面可以从视频和视频截图中选其一，选图片如果放在本地，要压缩，会变模糊，使用视频，视频源是横屏就是横屏，竖屏就是两边黑底 -->
+                              <image  class="video-fmimage" lazyLoad="{{true}}" style="width:700rpx;" 
+                                  src="{{item.fmimage}}">
+                              </image>
+
+                              
+                              <!-- <video  class="video-fmimage" 
+                              src="{{item.videourl}}" 
+                              show-center-play-btn="{{false}}"
+                              controls="{{false}}"
+                              ></video> -->
+                             
+                              <!-- <text class="video-title" style="font-weight: bold;font-size:46rpx">{{item.auth}}</text> -->
+                              
+                        </view>
+                         <image src="/image/tjfm/btnplay.png" class="btnplay"></image>
+                         <view class="title"><text class="title_text" >{{item.title}}</text></view> 
+                   </view>
+            </view>
+        </block>
+</view>
+
+<!------------------------------ 祝福 ------------------------------------->
+<view class="video-list"  wx:if="{{page==2}}">
+      <!-- <view>祝福</view> -->
+        <block wx:for="{{myVideoListZhufu}}"  data-index='{{index}}' bindtap="goDetail" wx:key='{{index}}'>
+            <view class="video-item">  
+                    <!-- banner图广告组件 -->
+                     <ad wx:if="{{index%4===1}}" unit-id="adunit-6c58a4c9758710e8"></ad>
+                   
+
+                     <!-- 视频列表主题 -->
+                     <view class="video-wraps"  data-index='{{index}}' data-videourl='{{item.videourl}}' bindtap="goDetail"  url="/example/video-swiper/video-swiper?index={{index}}&videourl={{item.videourl}}">
+                        <view class="video-wrap" wx:if="{{myVideoList}}" >
+
+                              <!-- 封面可以从视频和视频截图中选其一，选图片如果放在本地，要压缩，会变模糊，使用视频，视频源是横屏就是横屏，竖屏就是两边黑底 -->
+                              <image  class="video-fmimage" lazyLoad="{{true}}" style="width:700rpx;" 
+                                  src="{{item.fmimage}}">
+                              </image>
+
+                              <!-- <video  class="video-fmimage" 
+                              src="{{item.videourl}}" 
+                              show-center-play-btn="{{false}}"
+                              controls="{{false}}"
+                              ></video> -->
+                             
+                             
+                        </view>
+                          <image src="/image/tjfm/btnplay.png" class="btnplay"></image>
+                         <view class="title"><text class="title_text" >{{item.title}}</text></view> 
+                   </view>
+            </view>
+        </block>
+</view>
+<!------------------------------ 健康 ------------------------------------->
+<view class="video-list"  wx:if="{{page==3}}">
+      <!-- <view>健康</view> -->
+        <block wx:for="{{myVideoListJiankang}}"  data-index='{{index}}' bindtap="goDetail" wx:key='{{index}}'>
+            <view class="video-item">  
+                    <!-- banner图广告组件 -->
+                     <ad wx:if="{{index%4===1}}" unit-id="adunit-6c58a4c9758710e8"></ad>
+                   
+
+                     <!-- 视频列表主题 -->
+                     <view class="video-wraps"  data-index='{{index}}' data-videourl='{{item.videourl}}' bindtap="goDetail"  url="/example/video-swiper/video-swiper?index={{index}}&videourl={{item.videourl}}">
+                        <view class="video-wrap" wx:if="{{myVideoList}}" >
+
+                              <!-- 封面可以从视频和视频截图中选其一，选图片如果放在本地，要压缩，会变模糊，使用视频，视频源是横屏就是横屏，竖屏就是两边黑底 -->
+                              <image  class="video-fmimage" lazyLoad="{{true}}" style="width:700rpx;" 
+                                  src="{{item.fmimage}}">
+                              </image>
+                             
+                               <!-- <video  class="video-fmimage" 
+                              src="{{item.videourl}}" 
+                              show-center-play-btn="{{false}}"
+                              controls="{{false}}"
+                              ></video> -->
+                              
+                        </view>
+                        <image src="/image/tjfm/btnplay.png" class="btnplay"></image>
+                        <view class="title"><text class="title_text" >{{item.title}}</text></view> 
+                   </view>
+            </view>
+        </block>
+</view>
+<!------------------------------ 妙招 ------------------------------------->
+<view class="video-list"  wx:if="{{page==4}}">
+      <!-- <view>妙招</view> -->
+        <block wx:for="{{myVideoListMiaozhao}}"  data-index='{{index}}' bindtap="goDetail" wx:key='{{index}}'>
+            <view class="video-item">  
+                    <!-- banner图广告组件 -->
+                     <ad wx:if="{{index%4===1}}" unit-id="adunit-6c58a4c9758710e8"></ad>
+                   
+                     <!-- 视频列表主题 -->
+                     <view class="video-wraps"  data-index='{{index}}' data-videourl='{{item.videourl}}' bindtap="goDetail"  url="/example/video-swiper/video-swiper?index={{index}}&videourl={{item.videourl}}">
+                        <view class="video-wrap" wx:if="{{myVideoList}}" >
+                              <!-- 封面可以从视频和视频截图中选其一，选图片如果放在本地，要压缩，会变模糊，使用视频，视频源是横屏就是横屏，竖屏就是两边黑底 -->
+                              <image  class="video-fmimage" lazyLoad="{{true}}" style="width:700rpx;" 
+                                  src="{{item.fmimage}}">
+                              </image>                           
+
+                               <!-- <video  class="video-fmimage" 
+                              src="{{item.videourl}}" 
+                              show-center-play-btn="{{false}}"
+                              controls="{{false}}"
+                              ></video> -->
+                              
+                        </view>
+                        <image src="/image/tjfm/btnplay.png" class="btnplay"></image>
+                        <view class="title"><text class="title_text" >{{item.title}}</text></view> 
+                   </view>
+            </view>
+        </block>
+</view>
+<!------------------------------ 精彩 ------------------------------------->
+<view class="video-list"  wx:if="{{page==5}}">
+        <block wx:for="{{myVideoListJingcai}}"  data-index='{{index}}' bindtap="goDetail" wx:key='{{index}}'>
+            <view class="video-item">  
+                    <!-- banner图广告组件 -->
+                     <ad wx:if="{{index%4===1}}" unit-id="adunit-6c58a4c9758710e8"></ad>
+                   
+
+                     <!-- 视频列表主题 -->
+                     <view class="video-wraps"  data-index='{{index}}' data-videourl='{{item.videourl}}' bindtap="goDetail"  url="/example/video-swiper/video-swiper?index={{index}}&videourl={{item.videourl}}">
+                        <view class="video-wrap" wx:if="{{myVideoList}}" >
+                              <!-- 封面可以从视频和视频截图中选其一，选图片如果放在本地，要压缩，会变模糊，使用视频，视频源是横屏就是横屏，竖屏就是两边黑底 -->
+                              <image  class="video-fmimage" lazyLoad="{{true}}" style="width:700rpx;" 
+                                  src="{{item.fmimage}}">
+                              </image>
+
+                               <!-- <video  class="video-fmimage" 
+                              src="{{item.videourl}}" 
+                              show-center-play-btn="{{false}}"
+                              controls="{{false}}"
+                              ></video> -->
+                                                                            
+                        </view>
+                         <image src="/image/tjfm/btnplay.png" class="btnplay"></image>
+                        <view class="title"><text class="title_text" >{{item.title}}</text></view> 
+                   </view>
+            </view>
+        </block>
+</view>
+<!------------------------------ 歌舞 ------------------------------------->
+<view class="video-list"  wx:if="{{page==6}}">
+      <!-- <view>歌舞</view> -->
+        <block wx:for="{{myVideoListGewu}}"  data-index='{{index}}' bindtap="goDetail" wx:key='{{index}}'>
+            <view class="video-item">  
+                    <!-- banner图广告组件 -->
+                     <ad wx:if="{{index%4===1}}" unit-id="adunit-6c58a4c9758710e8"></ad>
+              
+                    
+                     <!-- 视频列表主题 -->
+                     <view class="video-wraps"  data-index='{{index}}' data-videourl='{{item.videourl}}' bindtap="goDetail"  url="/example/video-swiper/video-swiper?index={{index}}&videourl={{item.videourl}}">
+                        <view class="video-wrap" wx:if="{{myVideoList}}" >
+                              <!-- 封面可以从视频和视频截图中选其一，选图片如果放在本地，要压缩，会变模糊，使用视频，视频源是横屏就是横屏，竖屏就是两边黑底 -->
+                              <image  class="video-fmimage" lazyLoad="{{true}}" style="width:700rpx;" 
+                                  src="{{item.fmimage}}">
+                              </image>
+                              
+                                <!-- <video  class="video-fmimage" 
+                              src="{{item.videourl}}" 
+                              show-center-play-btn="{{false}}"
+                              controls="{{false}}"
+                              ></video>                          -->
+                             
+                        </view>
+                         <image src="/image/tjfm/btnplay.png" class="btnplay"></image>
+                        <view class="title"><text class="title_text" >{{item.title}}</text></view> 
+                   </view>
+            </view>
+        </block>
+</view>
+<!------------------------------ 人生 ------------------------------------->
+<view class="video-list"  wx:if="{{page==7}}">
+      <!-- <view>人生</view> -->
+        <block wx:for="{{myVideoListRensheng}}"  data-index='{{index}}' bindtap="goDetail" wx:key='{{index}}'>
+            <view class="video-item">  
+                    <!-- banner图广告组件 -->
+                     <ad wx:if="{{index%4===1}}" unit-id="adunit-6c58a4c9758710e8"></ad>                                       
+
+                     <!-- 视频列表主题 -->
+                     <view class="video-wraps"  data-index='{{index}}' data-videourl='{{item.videourl}}' bindtap="goDetail"  url="/example/video-swiper/video-swiper?index={{index}}&videourl={{item.videourl}}">
+                        <view class="video-wrap" wx:if="{{myVideoList}}" >
+
+                        <!-- 封面可以从视频和视频截图中选其一，选图片如果放在本地，要压缩，会变模糊，使用视频，视频源是横屏就是横屏，竖屏就是两边黑底 -->
+                              <image  class="video-fmimage" lazyLoad="{{true}}" style="width:700rpx;" 
+                                  src="{{item.fmimage}}">
+                              </image>
+                              
+                                <!-- <video  class="video-fmimage" 
+                              src="{{item.videourl}}" 
+                              show-center-play-btn="{{false}}"
+                              controls="{{false}}"
+                              ></video>                          -->
+                                                                                 
+                        </view>
+                         <image src="/image/tjfm/btnplay.png" class="btnplay"></image>
+                        <view class="title"><text class="title_text" >{{item.title}}</text></view> 
+                   </view>
+            </view>
+        </block>
+</view>
+
+<!-- 换一批 -->
+<view class="huang">
+    <image src="/image/huan.png" style="width:100rpx;height:100rpx" catchtap="huanyipi"  ></image>
+</view>
+
+<view class="notice {{noticemove==1?'noticemove':'noticemove2'}}" wx:if="{{notice}}">
+<!-- <view class="notice"> -->
+    <view class="noticetext">
+      <view class="noticeimg"><image src="/image/logo.png"  style="width:70rpx;height:70rpx;"></image></view> 
+      <view class="twkkk">图文看看看</view>
+      <view class="shengqing">申请</view>
+    </view>
+    <view class="fs">发送一次以下消息</view>
+    
+    <form bindsubmit="formSubmit" bindreset="formReset">
+        <view class="check">
+          <checkbox-group name="checkbox">
+            <label class="rad rads"><checkbox value="内容更新提醒" checked="checked"/>
+            <view class="text">
+              <view class="tx"> 内容更新提醒</view>
+              <image class="checkimg" src="/image/i.png" style="width:50rpx;height:50rpx"></image>        
+            </view>       
+            </label>
+            <label class="rad rads"><checkbox value="视频生成通知" checked="checked"/>
+              <view class="text">
+                <view class="tx"> 视频生成通知</view>
+              <image class="checkimg" src="/image/i.png" style="width:50rpx;height:50rpx"></image>     
+              </view>    
+            </label>
+            <label class="rad"><checkbox value="笑话故事更新通知" checked="checked"/>
+              <view class="text">
+                  <view class="tx"> 笑话故事更新通知</view>
+              <image class="checkimg" src="/image/i.png" style="width:50rpx;height:50rpx"></image>     
+                </view>     
+            </label>        
+          </checkbox-group>
+      </view>
+     
+      <view class="keepSelect">
+       <radio-group name="radio-group">
+          <label class="radkeep"><radio value="总是保持以上选择，不再询问" checked="checked"/>总是保持以上选择，不再询问</label>
+       </radio-group>
+      </view>
+
+    
+      <view class="btn">
+          <view class="bt">
+              <button class="quxiao"  catchtap="duihuaquxiao" formType="reset">取消</button>
+              <button type="primary" class="yunxu"  catchtap="duihuayunxu" formType="submit">允许</button>
+          </view>       
+      </view>
+    </form>
+    
+
+
+    
+    
+</view>
+
+
+
+</view>

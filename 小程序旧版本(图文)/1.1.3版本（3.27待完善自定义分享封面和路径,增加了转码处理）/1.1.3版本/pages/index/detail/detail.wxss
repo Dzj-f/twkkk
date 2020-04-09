@@ -1,0 +1,59 @@
+ .content{
+  height: 100vh;
+  width: 100vw
+}
+/* .videobox{
+  width: 100%;
+  height:100%;
+}  */
+
+
+
+/* .page-section-spacing{
+  margin-top: 0rpx
+}
+.scroll-view_H{
+  white-space: nowrap;
+}
+.scroll-view-item{
+  height: 100vh;
+}
+.scroll-view-item_H{
+  display: inline-block;
+  width: 100%;
+  height: 100vh;
+} */
+.txv{
+  width: 100%;
+  height: 1208rpx;
+  border: 2rpx solid red
+}
+
+
+
+
+.share{
+  position: fixed;
+  z-index: 100000;
+  bottom:50rpx;
+  left: 20rpx;
+  display: flex;
+  justify-content: space-around;
+  /* border: 6rpx blue solid; */
+  width: 700rpx;
+  height: 80rpx;
+  
+}
+.sha{
+   display: inline-block; 
+   text-align: center;
+   border-radius: 50rpx;
+}
+.sharefriend{
+   background: rgb(60, 173, 60);
+   
+}
+.sharequn{
+   background: rgb(206, 95, 95);
+  
+}

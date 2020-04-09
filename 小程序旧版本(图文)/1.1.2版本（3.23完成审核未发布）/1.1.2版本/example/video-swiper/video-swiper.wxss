@@ -1,0 +1,130 @@
+@import '../common.wxss';
+
+page{
+    background-color: #000000;
+    height: 100%;
+}
+
+mp-video-swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.container{
+  padding: 0 0;
+}
+
+ .share{
+  position: fixed;
+  bottom:40rpx;
+  left: 20rpx;
+  display: flex;
+   width: 100%;
+   height: 80rpx;
+  
+}
+.sha{
+   display: inline-block; 
+   text-align: center;
+   border-radius: 50rpx;
+}
+.sharefriend{
+   background: rgb(60, 173, 60);
+   
+   
+}
+.sharequn{
+   background: rgb(60, 173, 60);
+  
+}
+
+
+.text{
+  color:white;
+  bottom: 0;
+  left:10rpx;
+  position: absolute
+}
+.btntext{
+  color:white;
+}
+
+
+.shares{
+  width: 100%;
+  height: 80rpx;
+  position: fixed;
+  bottom:10rpx;
+  left: 10rpx;
+}
+
+.shareimg{
+   position: absolute;
+    right:0; 
+    bottom: 0; 
+}
+.imgg{
+   position: absolute;
+   margin-left:10rpx;
+   bottom: 0; 
+}
+.btn{
+  display: inline-block!important;
+  padding: 0 !important;
+  position: absolute;
+  left:240rpx;
+  bottom: 0; 
+  background: #000000;
+}
+
+
+
+.videotitle{
+  position: absolute;
+  z-index: 99999;
+  top: 30rpx;
+  left:20rpx;
+  color: #ffffff;
+  font-weight: bold;
+} 
+
+.fasong{
+  /* background: url('/image/tjfm/1.22.jpg'); */
+  display: inline-block;
+  width: 342rpx;
+  height:110rpx;
+  position: absolute;
+  right: 20rpx;
+  bottom: 0rpx;
+   -webkit-animation: mymove 1s infinite; 
+    animation: mymove 5s infinite;
+  
+}
+.shareQun{
+  display: inline-block;
+  width: 342rpx;
+  height:110rpx;
+  position: absolute;
+  left: 40rpx;
+  bottom: 0rpx;
+  -webkit-animation: mymove 1s infinite; 
+   animation: mymove 5s infinite;
+}
+.like{
+  position: absolute;
+  right:130rpx;
+  bottom:90rpx;
+}
+.likemore{
+  position: absolute;
+  left:30rpx;
+  bottom:90rpx;
+}
+@-webkit-keyframes mymove {
+    50% {background-size: 334rpx 118rpx;}    /* Chrome, Safari, Opera */
+}
+
+/* Standard syntax */
+@keyframes mymove {
+    50% {background-size: 334rpx 118rpx;}
+}

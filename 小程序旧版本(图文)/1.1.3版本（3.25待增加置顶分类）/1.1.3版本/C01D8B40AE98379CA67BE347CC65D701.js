@@ -1,0 +1,256 @@
+module.exports = [ {
+    value: "洛阳",
+    name: "luoyang"
+}, {
+    value: "六安",
+    name: "1luan"
+}, {
+    value: "金华",
+    name: "jinhua"
+}, {
+    value: "荆州",
+    name: "jingzhou"
+}, {
+    value: "衡阳",
+    name: "hengyang"
+}, {
+    value: "阜阳",
+    name: "fuyang"
+}, {
+    value: "大连",
+    name: "dalian"
+}, {
+    value: "长治",
+    name: "changzhi"
+}, {
+    value: "郑州",
+    name: "zhengzhou"
+}, {
+    value: "西宁",
+    name: "xining"
+}, {
+    value: "西安",
+    name: "1xian"
+}, {
+    value: "武汉",
+    name: "wuhan"
+}, {
+    value: "沈阳",
+    name: "shenyang"
+}, {
+    value: "南京",
+    name: "nanjing"
+}, {
+    value: "兰州",
+    name: "lanzhou"
+}, {
+    value: "济南",
+    name: "jinan"
+}, {
+    value: "呼和浩特",
+    name: "huhehaote"
+}, {
+    value: "哈尔滨",
+    name: "haerbin"
+}, {
+    value: "合肥",
+    name: "hefei"
+}, {
+    value: "杭州",
+    name: "hangzhou"
+}, {
+    value: "福州",
+    name: "fuzhou"
+}, {
+    value: "长沙",
+    name: "changsha"
+}, {
+    value: "长春",
+    name: "changchun"
+}, {
+    value: "成都",
+    name: "chengdu"
+}, {
+    value: "石家庄",
+    name: "shijiazhuang"
+}, {
+    value: "肇庆",
+    name: "zhaoqing"
+}, {
+    value: "云浮",
+    name: "yunfu"
+}, {
+    value: "清远",
+    name: "qingyuan"
+}, {
+    value: "重庆",
+    name: "chongqing"
+}, {
+    value: "天津",
+    name: "tianjin"
+}, {
+    value: "新疆",
+    name: "xinjiang"
+}, {
+    value: "宁夏",
+    name: "ningxia"
+}, {
+    value: "广西",
+    name: "guangxi"
+}, {
+    value: "内蒙古",
+    name: "neimenggu"
+}, {
+    value: "陕西",
+    name: "shanxi"
+}, {
+    value: "四川",
+    name: "sichuan"
+}, {
+    value: "海南",
+    name: "hainan"
+}, {
+    value: "湖南",
+    name: "hunan"
+}, {
+    value: "湖北",
+    name: "hubei"
+}, {
+    value: "山东",
+    name: "shandong"
+}, {
+    value: "福建",
+    name: "fujian"
+}, {
+    value: "安徽",
+    name: "anhui"
+}, {
+    value: "浙江",
+    name: "zhejiang"
+}, {
+    value: "黑龙江",
+    name: "heilongjiang"
+}, {
+    value: "吉林",
+    name: "jilin"
+}, {
+    value: "江苏",
+    name: "jiangsu"
+}, {
+    value: "辽宁",
+    name: "liaoning"
+}, {
+    value: "九江",
+    name: "jiujiang"
+}, {
+    value: "江门",
+    name: "jiangmen"
+}, {
+    value: "惠州",
+    name: "huizhou"
+}, {
+    value: "中山",
+    name: "zhongshan"
+}, {
+    value: "韶关",
+    name: "shaoguan"
+}, {
+    value: "湛江",
+    name: "zhanjiang"
+}, {
+    value: "汕头",
+    name: "shantou"
+}, {
+    value: "珠海",
+    name: "zhuhai"
+}, {
+    value: "东莞",
+    name: "dongguan"
+}, {
+    value: "佛山",
+    name: "foshan"
+}, {
+    value: "深圳",
+    name: "shenzhen"
+}, {
+    value: "广州",
+    name: "guangzhou"
+}, {
+    value: "遵义",
+    name: "zunyi"
+}, {
+    value: "株洲",
+    name: "zhuzhou"
+}, {
+    value: "周口",
+    name: "zhoukou"
+}, {
+    value: "张掖",
+    name: "zhangye"
+}, {
+    value: "张家界",
+    name: "zhangjiajie"
+}, {
+    value: "运城",
+    name: "yuncheng"
+}, {
+    value: "永州",
+    name: "yongzhou"
+}, {
+    value: "盐城",
+    name: "yancheng"
+}, {
+    value: "延安",
+    name: "yanan"
+}, {
+    value: "榆林",
+    name: "yulin"
+}, {
+    value: "岳阳",
+    name: "yueyang"
+}, {
+    value: "扬州",
+    name: "yangzhou"
+}, {
+    value: "襄阳",
+    name: "xiangyang"
+}, {
+    value: "宣城",
+    name: "xuancheng"
+}, {
+    value: "咸阳",
+    name: "xianyang"
+}, {
+    value: "徐州",
+    name: "xuzhou"
+}, {
+    value: "湘潭",
+    name: "xiangtan"
+}, {
+    value: "渭南",
+    name: "weinan"
+}, {
+    value: "上海",
+    name: "shanghai"
+}, {
+    value: "河南",
+    name: "henan"
+}, {
+    value: "北京",
+    name: "beijing"
+}, {
+    value: "广东",
+    name: "guangdong"
+}, {
+    value: "河北",
+    name: "hebei"
+}, {
+    value: "甘肃",
+    name: "gansu"
+}, {
+    value: "江西",
+    name: "jiangxi"
+}, {
+    value: "贵州",
+    name: "guizhou"
+} ];

@@ -1,0 +1,26 @@
+module.exports = [ {
+    name: "小号",
+    value: "15",
+    active: !1,
+    line: "22"
+}, {
+    name: "标准",
+    value: "17",
+    active: !0,
+    line: "28"
+}, {
+    name: "中号",
+    value: "19",
+    active: !1,
+    line: "32"
+}, {
+    name: "大号",
+    value: "21",
+    active: !1,
+    line: "32"
+}, {
+    name: "特大号",
+    value: "23",
+    active: !1,
+    line: "34"
+} ];

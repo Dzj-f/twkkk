@@ -1,0 +1,83 @@
+<view class="container">
+  <swiper 
+    class="video-swiper" 
+    circular="{{circular}}"  
+    easing-function="{{easingFunction}}" 
+    current="1" 
+    duration="{{duration}}" 
+    bindanimationfinish="animationfinish"
+    vertical 
+    >
+    <!-- curQueue 循环会导致video重新插入，objectFit 不可变更 -->
+    <swiper-item wx:for="{{curQueue}}" wx:key="*this">
+
+
+ <!-- vid版 -->
+
+ <!-- <txv-video
+      autoplay="{{false}}"
+       class="txv" 
+      showCenterPlayBtn="{{true}}"
+       width="{{width}}"    
+       height="{{height}}"
+      isNeedMutex="{{true}}"
+      isHiddenStop="{{true}}"
+      playerid="txv1"  
+      vid="{{item.url}}"
+      id="video_{{index}}" 
+      class="video_item" 
+      loop="{{loop}}" 
+      enable-play-gesture 
+      enable-progress-gesture 
+      show-center-play-btn="{{false}}"
+      controls="{{true}}"  
+      data-id="{{item.id}}"
+      object-fit="{{item.objectFit || 'contain'}}"
+      data-index="{{index}}"
+      bindplay="onPlay"
+      bindpause="onPause"
+      bindended="onEnded"
+      binderror="onError"
+      bindtimeupdate="onTimeUpdate"
+      bindwaiting="onWaiting"
+      bindprogress="onProgress"
+      bindloadedmetadata="onLoadedMetaData">
+  </txv-video> -->
+
+
+
+
+
+      <video 
+        id="video_{{index}}" 
+        class="video_item" 
+        loop="{{loop}}"
+        auto-pause-if-navigate 
+        enable-play-gesture
+        enable-progress-gesture 
+        show-center-play-btn="{{false}}"
+        controls="{{false}}"
+        src="{{item.url}}" 
+        data-id="{{item.id}}"
+        object-fit="{{item.objectFit || 'contain'}}"
+        data-index="{{index}}"
+        bindplay="onPlay"
+        bindpause="onPause"
+        bindended="onEnded"
+        binderror="onError"
+        bindtimeupdate="onTimeUpdate"
+        bindwaiting="onWaiting"
+        bindprogress="onProgress"
+        bindloadedmetadata="onLoadedMetaData"
+        muted="{{muted}}"
+      >
+      </video>
+ 
+ 
+
+
+
+    </swiper-item>
+  </swiper>
+</view>
+

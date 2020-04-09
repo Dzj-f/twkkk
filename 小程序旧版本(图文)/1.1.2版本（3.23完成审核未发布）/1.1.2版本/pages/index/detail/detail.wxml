@@ -1,0 +1,115 @@
+     
+
+  <!-- <view class="page-body">
+    <view class="page-section">
+     
+      <view class="page-section-spacing">
+        <scroll-view scroll-y="true" style="height: 100vh;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}" wx:for="{{videoList}}">
+
+          <view id="demo1" class="scroll-view-item demo-text-1" >           
+               <txv-video 
+                  vid="{{item.url}}"  
+                  playerid="{{item.txv1}}" 
+                  width="{{width}}"    
+                  height="{{height}}" 
+                  isHiddenStop="{{true}}"
+                  isNeedMutex="{{true}}"
+                   autoplay="{{true}}"> 
+                  <view class='txv-video-slot'></view>
+              </txv-video> 
+          </view>
+
+         
+
+        </scroll-view>
+      </view>
+</view>
+
+</view> -->
+
+
+<!-- <view class="share">
+        <button class="sharefriend sha" openType="share" style="width: 300rpx; height: 80rpx ; ">
+              <text class="sharetext" >分享给好友</text>
+        </button>
+        <button class="sharequn sha" openType="share" style="width: 300rpx; height: 80rpx ; ">
+              <text class="sharetext" >分享到群</text>
+        </button> 
+</view> -->
+
+
+
+
+<view class="content">
+
+    
+<!-- <txv-video 
+  vid="{{item.url}}"  
+  playerid="{{item.txv1}}"     
+  autoplay="{{true}}"
+  isHiddenStop="{{true}}" 
+  isNeedMutex="{{true}}"
+  width="{{width}}"    
+  height="{{height}}" 
+  object-fit="{{contain}}"
+></txv-video> -->
+
+
+
+<txv-video 
+  vid="k3065ftxa2j"  
+  playerid="tx2"     
+  autoplay="{{true}}"
+  isHiddenStop="{{true}}" 
+  isNeedMutex="{{true}}"
+  width="{{width}}"    
+  height="{{height}}" 
+  object-fit="{{contain}}"
+></txv-video>
+
+
+<txv-video 
+  vid="t3035flep1f"  
+  playerid="tx1"     
+  autoplay="{{true}}"
+  isHiddenStop="{{true}}" 
+
+  width="{{width}}"    
+  height="{{height}}" 
+  object-fit="{{contain}}"
+></txv-video>
+
+<txv-video 
+  vid="k3065ftxa2j"  
+  playerid="tx3"     
+  autoplay="{{true}}"
+  isHiddenStop="{{true}}" 
+
+  width="{{width}}"    
+  height="{{height}}" 
+  object-fit="{{contain}}"
+></txv-video>
+
+
+<txv-video 
+  vid="t3035flep1f"  
+  playerid="tx4"     
+  autoplay="{{true}}"
+  isHiddenStop="{{true}}" 
+
+  width="{{width}}"    
+  height="{{height}}" 
+  object-fit="{{contain}}"
+></txv-video>
+  
+</view>
+        
+      
+  
+
+
+
+
+
+
+

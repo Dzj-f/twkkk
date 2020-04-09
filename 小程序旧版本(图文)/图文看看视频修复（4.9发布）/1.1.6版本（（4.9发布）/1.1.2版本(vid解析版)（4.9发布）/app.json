@@ -1,0 +1,22 @@
+{
+  "pages": [ 
+    "pages/index/index",
+    "example/video-swiper/video-swiper",
+    "pages/index/detail/detail",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "图文看看看",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "plugins": {
+    "tencentvideo": {
+      "version": "1.3.9",
+      "provider": "wxa75efa648b60994b"
+    }
+  }
+}

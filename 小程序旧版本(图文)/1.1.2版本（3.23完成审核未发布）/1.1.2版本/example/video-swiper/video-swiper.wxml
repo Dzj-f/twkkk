@@ -1,0 +1,61 @@
+<mp-video-swiper 
+  class="video-swiper" 
+  video-list="{{videoList}}"
+  bindplay="onPlay"
+  bindpause="onPause"
+  bindchange="change"
+  bindtimeupdate="onTimeUpdate"
+  bindended="onEnded"
+  binderror="onError"
+  bindwaiting="onWaiting"
+  bindprogress="onProgress"
+  bindloadedmetadata="onLoadedMetaData"
+  data-index="{{index}}" 
+  muted="{{muted}}"
+></mp-video-swiper>
+
+
+
+<view class="shares" wx:if="{{sharebtnshow&&share}}">      
+            <!-- <view class="text" >
+                <text>上滑查看更多内容</text>
+               <image src="/image/more.png" style="width:60rpx;height:60rpx;" class="imgg" ></image>          
+            </view> -->
+
+
+                <image  src="https://www.otvllat.cn/public/img/likemore.png" style="width:260rpx;height:60rpx;" class="likemore" ></image>    
+
+               <button  class="shareQun" 
+            open-type="share" style="background: url('https://www.otvllat.cn/public/img/shareQun.png') ;background-size: 260rpx 88rpx; background-repeat:no-repeat; ">
+           
+            </button>
+
+             <image  src="https://www.otvllat.cn/public/img/like.png" style="width:260rpx;height:60rpx;" class="like" ></image>    
+
+            <button  class="fasong" 
+            open-type="share" style="background: url('https://www.otvllat.cn/public/img/share.png') ;background-size: 260rpx 88rpx; background-repeat:no-repeat; ">
+           
+            </button>
+
+              
+            <!-- <button open-type="share" style="width:288rpx;height:88rpx;margin-left:200rpx;display: inline-block;" class="btn">
+           
+</button> -->
+           
+            
+    
+       
+</view>
+
+
+
+ <!-- <view class="videotitle">{{videotitle}}</view> -->
+
+
+
+
+
+<!-- 分享 -->
+<!-- <form bindreset="formReset" bindsubmit="formSubmit" reportSubmit="true">
+    <button class="share1" formType="submit" openType="share" plain="{{true}}">分享至好友</button>
+</form> -->

@@ -1,0 +1,62 @@
+     
+<!-- <view class="share">
+        <button class="sharefriend sha" openType="share" style="width: 300rpx; height: 80rpx ; ">
+              <text class="sharetext" >分享给好友</text>
+        </button>
+        <button class="sharequn sha" openType="share" style="width: 300rpx; height: 80rpx ; ">
+              <text class="sharetext" >分享到群</text>
+        </button> 
+</view> -->
+
+
+
+<scroll-view class="content" scroll-into-view="tv2" scroll-y="true" scroll-with-animation="true"> 
+<!-- <view class="content" wx:for="{{videoList}}"> -->
+
+
+
+<view class="txv" id="tv1" >
+    <txv-video 
+    vid="c30719tg5ew"
+    playerid="tv1"     
+    isHiddenStop="{{true}}" 
+    isNeedMutex="{{true}}"
+    object-fit="{{contain}}"
+  ></txv-video>
+ <view>111</view>
+</view>
+
+<view class="txv" id="tv3" >
+    <txv-video 
+    vid="q3058h9sqhz"
+    playerid="tv2"     
+    isHiddenStop="{{true}}" 
+    isNeedMutex="{{true}}"
+    object-fit="{{contain}}"
+  ></txv-video>
+  <view>22</view>
+</view>
+
+<view class="txv" id="tv4" >
+    <txv-video 
+    vid="c30719tg5ew"
+    playerid="tv3"     
+    isHiddenStop="{{true}}" 
+    isNeedMutex="{{true}}"
+    object-fit="{{contain}}"
+  ></txv-video>
+  <view>33</view>
+</view>
+
+<!-- </view> -->
+
+</scroll-view>
+      
+  
+
+
+
+
+
+
+
