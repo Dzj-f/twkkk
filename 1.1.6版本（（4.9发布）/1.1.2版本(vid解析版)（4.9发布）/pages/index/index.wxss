@@ -1,0 +1,194 @@
+/* 头部滑动导航栏一 */
+.moreBoxs{
+    width: 100%;
+    height: 102rpx;
+    border-bottom: solid 2rpx #e5e5e5;
+    position: fixed;
+    top: 0;
+    background-color: #ffffff;
+    z-index: 99999999;
+}
+ 
+.navContent{
+    width: 100%;
+    height: 102rpx;
+    white-space: nowrap;
+}
+.classify {
+	height: 102rpx;
+	/*width: 8%;*/
+	margin-left: 26rpx;
+	line-height: 102rpx;
+	text-align: center;
+	font-size: 46rpx;
+  display: inline-block;
+}
+ 
+.addStyleMi {
+	height: 96rpx;
+	border-bottom: solid 6rpx #eb3737;
+	font-weight: bold;
+	color: #eb3737;
+	font-size: 50rpx;
+}
+/* ---------隐藏滚动条 */
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+
+}
+
+
+
+
+
+/* 主体内容 */
+.container{
+  margin-top:102rpx;
+  padding:0;
+}
+
+
+
+
+
+
+
+
+
+/* 弹窗广告 */
+
+.layer{
+  width:80vw;
+  height: 80vh;
+  position: fixed;
+  top:0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999999
+}
+.layer-img{
+  width: 100%;                     /*弹窗广告图片的大小*/
+}
+
+.colse-icon{
+  display: flex;
+  width: 30px;
+  position: absolute;              /*设置为绝对定位，调整关闭按钮的位置*/
+  top:100rpx;
+  right: 6rpx;
+}
+
+
+/* 视频列表主题 */
+.video-list{
+  padding: 0;
+  margin-top:20rpx;
+  width: 100%;
+}
+.video-wraps{
+  /* height:300rpx; */
+  width: 100%;
+  position: relative;
+  margin-bottom: 30rpx;
+  margin-top: 30rpx;
+
+}
+.video-wrap{
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    
+}
+
+.title{
+  color: #ffffff;
+  position: absolute;
+  /* 视频高度是450rpx，父元素是458rpx，视频高度和位置都没调不了，所以把title也设置为距离父元素底部8rpx */
+  bottom:8rpx;
+  left: 28rpx;
+  z-index: 1000;
+  background:#161816;
+  opacity: 0.7;
+  width: 696rpx;
+  border-bottom-right-radius: 30rpx;
+  border-bottom-left-radius: 30rpx;
+  text-align: center;
+}
+.title_text{
+  /* margin-left:60rpx; */
+  display: inline-block;
+  margin-bottom: 10rpx;
+  font-weight: bold;
+  color: white;
+   font-size: 50rpx;
+}
+
+
+.video-fmimage{
+  border-radius: 30rpx;
+  width:94%;
+  margin: 0;
+  padding: 0;
+
+}
+.btnplay{
+  position: absolute;
+  top: 155rpx;
+  left: 305rpx;
+  z-index: 1000;
+  width:140rpx;
+  height: 140rpx;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 头部滑动导航栏二 */
+
+.scroll-view_H{
+  white-space: nowrap;
+}
+.scroll-view-item{
+  height: 70rpx;
+}
+.scroll-view-item_H{
+  display: inline-block;
+  text-align: center;
+  width: 118rpx;
+  height: 70rpx;
+  font-size: 42rpx;
+  margin-left: 20rpx;
+  color: #888c89;
+ }
+.active{
+  border-bottom: 4rpx #06a02e solid;
+  color: #06a02e ;
+  font-size: 50rpx ;
+
+  font-weight: bold;
+  display: inline-block;
+  text-align: center;
+  width: 118rpx;
+  height: 70rpx;
+  margin-left: 20rpx;
+}

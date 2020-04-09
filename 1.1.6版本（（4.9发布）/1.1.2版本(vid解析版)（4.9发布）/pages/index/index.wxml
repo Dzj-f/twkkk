@@ -1,0 +1,89 @@
+<!-- 头部导航栏 -->
+  <view class='moreBoxs'>
+      <scroll-view class="navContent" scroll-x>
+        <view class="classify {{first_id==index?'addStyleMi':''}}" bindtap="navClick" 
+                      wx:for='{{first_names}}' wx:key='index'  wx:for-item="first_names" wx:for-index="index" 
+                      data-postid='{{first_names.id}}' data-index='{{index}}' data-postname='{{first_names.goods_name}}'>
+            <text>{{first_names.goods_name}}</text>
+          </view>
+      </scroll-view>
+</view>  
+
+<view class="container">
+
+<!------------------------------ 推荐 ------------------------------------->
+<view class="video-list"  wx:if="{{page==0}}">
+      <!-- <view>推荐</view> -->
+        <block wx:for="{{myVideoList}}"  data-index='{{index}}' bindtap="goDetail" wx:key='index'>
+            <view class="video-item">  
+                    <!-- banner图广告组件 -->
+
+                    <ad wx:if="{{index%4===1}}" unit-id="adunit-6c58a4c9758710e8"></ad>
+            
+                    
+                     <!-- 视频列表主题 -->
+                     <view class="video-wraps"  data-index='{{index}}' data-videourl='{{item.videourl}}' bindtap="goDetail"  url="" data-videotitle='{{item.title}}'>
+                        <view class="video-wrap" wx:if="{{myVideoList}}" >
+
+                              <!-- 封面可以从视频和视频截图中选其一，选图片如果放在本地，要压缩，会变模糊，使用视频，视频源是横屏就是横屏，竖屏就是两边黑底 -->
+                              <image  class="video-fmimage" lazyLoad="{{true}}" style="width:700rpx;" 
+                                  src="{{item.fmimage}}">
+                              </image>
+
+                              <!-- <video  class="video-fmimage" 
+                              src="{{item.videourl}}" 
+                              show-center-play-btn="{{false}}"
+                              controls="{{false}}"
+                              ></video>                                                              -->
+
+
+                          <!-- 播放按钮相对于推荐最外层view绝对定位                           -->
+                      </view>
+                         <image src="/image/tjfm/btnplay.png" class="btnplay"></image>
+                         <view class="title"><text class="title_text" >{{item.title}}</text></view> 
+                      </view>
+    
+            </view>
+        </block>
+        <view style="text-align:center">加载中...</view>
+</view>
+
+<!------------------------------ 搞笑等7个分类 ------------------------------------->
+<!-- <view class="video-list"  wx:if="{{page==1}}"> -->
+<view class="video-list"  wx:if="{{page!==0}}">
+      <!-- <view>搞笑</view> -->
+        <block wx:for="{{myVideoList}}"  data-index='{{index}}' bindtap="goDetail" wx:key='{{index}}'>
+            <view class="video-item">  
+                    <!-- banner图广告组件 -->
+
+                     <ad wx:if="{{index%4===1}}" unit-id="adunit-6c58a4c9758710e8"></ad>
+
+                     <!-- 视频列表主题 -->
+                     <view class="video-wraps"  data-index='{{index}}' data-videourl='{{item.videourl}}' bindtap="bindVideoTap"  data-src="{{item.video_link}}" data-subtype="{{item.subtype}}" data-title="{{item.topic}}" data-type="{{item.type}}" data-url="{{item.url}}">
+                        <view class="video-wrap" wx:if="{{myVideoList}}" >
+
+                               <!-- 封面可以从视频和视频截图中选其一，选图片如果放在本地，要压缩，会变模糊，使用视频，视频源是横屏就是横屏，竖屏就是两边黑底 -->
+                              <image  class="video-fmimage" lazyLoad="{{true}}" style="width:700rpx;" 
+                                  src="{{item.lbimg[0].src}}">
+                              </image>
+
+                              
+                              <!-- <video  class="video-fmimage" 
+                              src="{{item.videourl}}" 
+                              show-center-play-btn="{{false}}"
+                              controls="{{false}}"
+                              ></video> -->
+                             
+                              <!-- <text class="video-title" style="font-weight: bold;font-size:46rpx">{{item.auth}}</text> -->
+                              
+                        </view>
+                         <image src="/image/tjfm/btnplay.png" class="btnplay"></image>
+                         <view class="title"><text class="title_text" >{{item.topic}}</text></view> 
+                   </view>
+            </view>
+        </block>
+        <view style="text-align:center">加载中...</view>
+</view>
+
+
+</view>
